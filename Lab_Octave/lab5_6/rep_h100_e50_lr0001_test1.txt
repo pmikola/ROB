@@ -1,0 +1,8 @@
+# Created by Octave 6.2.0, Fri May 21 15:20:00 2021 GMT <unknown@DESKTOP-PM2CTTO>
+# name: TrainingReport
+# type: matrix
+# rows: 1
+# columns: 4
+ 1 30.855032920837402 0.60294999999999999 0.60219999999999996
+
+

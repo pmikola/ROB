@@ -1,0 +1,3 @@
+function [errcfs] = voteAveraging(clsscores, tstl, threshold)% simple plurality classifier - class with greates number of votes wins (if unique)% clslabels - matrix containing elementary classifiers results%	each row contains NN labels for one test element% tstl - test set labels (ground truth)% errcf - error coefficients of the classifier	clsCount = columns(clsscores);  reject = max(tstl) + 1;    clsscores ./= sum(clsscores,2);    lab = decmax(clsscores);    for i = 1:rows(lab)    if clsscores(i,lab(i)) < threshold      lab(i) = reject;    endif
+  endfor
+  	confmx = confMx(tstl, lab);	errcfs = compErrors(confmx);
